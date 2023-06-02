@@ -1,0 +1,10 @@
+version: '3.3'
+services:
+    php:
+        build: ./php
+        container_name: php-web
+        restart: always
+        ports:
+            - "50000:9000"
+        volumes:
+            - ./html:/var/www/html
